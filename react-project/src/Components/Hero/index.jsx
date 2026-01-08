@@ -1,0 +1,80 @@
+import React from "react";
+import { ButtonSolidColor } from "../ButtonSolidColor";
+import { ButtonTransparentColor } from "../ButtonTransparentColor";
+import { Tag } from "../Tag";
+import { ButtonRounded } from "../ButtonRounded";
+import { RoundedImage } from "../RoundedImage";
+import { IoLogoGithub } from "react-icons/io";
+import { FaLinkedin } from "react-icons/fa";
+import perfil from "../../Images/perfil.jpg"
+
+export const Hero = () => {
+    return (
+        <section className="flex items-center justify-center min-h-screen pt-16 px-8 bg-gradient-to-r from-slate-900 to-slate-800">
+            <div className="flex gap-16 items-center justify-center max-w-6xl w-full">
+                {/* Columna 1 - Contenido */}
+                <div className="flex flex-col gap-6 flex-1">
+                    <div>
+                        <h1 className="text-5xl font-bold text-blue-400 mb-2">
+                            Julian Darío
+                        </h1>
+                        <h1 className="text-5xl font-bold text-white mb-2">
+                            González Toledo
+                        </h1>
+                        <p className="text-2xl font-semibold text-gray-400">
+                            Full Stack Developer
+                        </p>
+                    </div>
+
+                    <p className="text-gray-300 text-lg leading-relaxed">
+                        Desarrollador Colombiano de soluciones de software a la medida 
+                        que se busca automatizar y agilizar su flujo de trabajo,
+                        apasionado por crear soluciones web modernas y eficientes. 
+                        Caracterizado por el compromiso, liderazgo y trabajo en equipo.
+                    </p>
+
+                    {/* Tags de lenguajes */}
+                    <div className="flex flex-wrap gap-3">
+                        <Tag>
+                            C#
+                        </Tag>
+                        <Tag>
+                            Python
+                        </Tag>
+                        <Tag>
+                            JavaScript
+                        </Tag>
+                        <Tag>
+                            SQL
+                        </Tag>
+                    </div>
+
+                    {/* Botones */}
+                    <div className="flex gap-4 items-center">
+                        <ButtonSolidColor >
+                            Ver Proyectos
+                        </ButtonSolidColor>
+                        <ButtonTransparentColor>
+                            Ver Hoja de vida
+                        </ButtonTransparentColor>
+                    </div>
+
+                    {/* Botones circulares con iconos */}
+                    <div className="flex gap-4 items-center">
+                        <ButtonRounded>
+                            <IoLogoGithub />
+                        </ButtonRounded>
+                        <ButtonRounded>
+                            <FaLinkedin />
+                        </ButtonRounded>
+                    </div>
+                </div>
+
+                {/* Columna 2 - Imagen circular */}
+                <div className="flex-1 flex justify-center">
+                    <RoundedImage src={perfil} alt="Perfil" className="w-full h-full rounded-full object-cover" />
+                </div>
+            </div>
+        </section>
+    )
+}
