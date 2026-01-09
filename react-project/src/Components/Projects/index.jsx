@@ -92,7 +92,7 @@ export const Projects = () => {
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState(null);
 
-    const filterTags = ["JavaScript", "C#"];
+    const filterTags = ["JavaScript", "C#", "Python"];
 
     const handleLoadMore = () => {
         setProjectsToShow(projectsToShow + 4);
