@@ -10,7 +10,7 @@ import perfil from "../../Images/perfil.jpg"
 
 export const Hero = () => {
     return (
-        <section className="flex items-center justify-center min-h-screen pt-32 md:pt-16 px-6 md:px-8 bg-gradient-to-r from-slate-900 to-slate-800">
+        <section className="flex items-center justify-center min-h-screen pt-32 md:pt-16 px-6 md:px-8 bg-gradient-to-r from-slate-900 to-slate-800" id="Hero">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center max-w-6xl w-full">
                 {/* Columna 1 - Contenido */}
                 <div className="flex flex-col gap-6 flex-1 w-full md:w-auto">
@@ -57,11 +57,11 @@ export const Hero = () => {
 
                     {/* Botones */}
                     <div className="flex flex-col sm:flex-row gap-4 items-center w-full sm:w-auto">
-                        <ButtonSolidColor >
+                        <ButtonSolidColor url="#Projects">
                             Ver Proyectos
                         </ButtonSolidColor>
-                        <ButtonTransparentColor>
-                            Ver Hoja de vida
+                        <ButtonTransparentColor pdfUrl="/documents/curriculum.pdf">
+                            Descargar CV
                         </ButtonTransparentColor>
                     </div>
 

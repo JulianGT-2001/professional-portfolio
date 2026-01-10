@@ -15,9 +15,9 @@ export const NavBar = () => {
             
             {/* Desktop Menu */}
             <ul className="hidden md:flex list-none gap-12">
-                <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Acerca de</li>
-                <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Proyectos</li>
-                <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Contacto</li>
+                <a href="#Hero"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Acerca de</li></a>
+                <a href="#Projects"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Proyectos</li></a>
+                <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden">Contacto</li>
             </ul>
 
             {/* Mobile Menu Button */}
@@ -33,7 +33,7 @@ export const NavBar = () => {
                 <ul className="absolute top-full left-0 w-full bg-gradient-to-r from-blue-950 to-blue-900 flex flex-col gap-4 py-4 px-8 md:hidden">
                     <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Acerca de</li>
                     <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Proyectos</li>
-                    <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Contacto</li>
+                    <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden">Contacto</li>
                 </ul>
             )}
         </nav>
