@@ -92,7 +92,7 @@ export const Projects = () => {
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState(null);
 
-    const filterTags = ["JavaScript", "C#", "Python"];
+    const filterTags = ["JavaScript", "C#", "Python", "SQL"];
 
     const handleLoadMore = () => {
         setProjectsToShow(projectsToShow + 4);
@@ -113,7 +113,7 @@ export const Projects = () => {
         : projects;
 
     return (
-        <section className="bg-gradient-to-r from-slate-900 to-slate-800">
+        <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-4">
             <div className="w-4/5 mx-auto flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-12">
                 <div className="flex flex-col gap-2">
                     <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Proyectos</h1>

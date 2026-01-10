@@ -2,6 +2,7 @@ import './App.css'
 import { NavBar } from './Components/NavBar'
 import { ButtonSolidColor } from './Components/ButtonSolidColor'
 import { Hero } from './Components/Hero'
+import { Footer } from './Components/Footer'
 import { Projects } from './Components/Projects'
 
 export default function App() {
@@ -10,6 +11,7 @@ export default function App() {
     <NavBar />
     <Hero />
     <Projects />
+    <Footer />
     </>
   )
 }
