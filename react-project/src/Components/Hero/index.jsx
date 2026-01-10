@@ -47,6 +47,12 @@ export const Hero = () => {
                         <Tag>
                             SQL
                         </Tag>
+                        <Tag>
+                            HTML
+                        </Tag>
+                        <Tag>
+                            CSS
+                        </Tag>
                     </div>
 
                     {/* Botones */}
