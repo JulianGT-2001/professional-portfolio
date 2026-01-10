@@ -2,9 +2,12 @@ import React from "react";
 
 export const ButtonTransparentColor = ({ children, classes, onClick, pdfUrl }) => {
     const handleDownload = () => {
+        const baseUrl = import.meta.env.BASE_URL;
+        const fullPath = baseUrl + pdfUrl.replace(/^\//, "");
+        
         const link = document.createElement("a");
-        link.href = pdfUrl;
-        link.download = pdfUrl.split("/").pop(); // Obtiene el nombre del archivo
+        link.href = fullPath;
+        link.download = pdfUrl.split("/").pop();
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
