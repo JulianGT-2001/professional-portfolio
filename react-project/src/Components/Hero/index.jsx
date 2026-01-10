@@ -66,7 +66,7 @@ export const Hero = () => {
                     </div>
 
                     {/* Botones circulares con iconos */}
-                    <div className="flex gap-4 items-center">
+                    <div className="flex gap-4 items-center justify-center md:justify-start">
                         <ButtonRounded url="https://github.com/JulianGT-2001">
                             <IoLogoGithub />
                         </ButtonRounded>
