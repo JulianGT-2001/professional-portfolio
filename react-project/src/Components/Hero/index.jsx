@@ -22,7 +22,7 @@ export const Hero = () => {
                             González Toledo
                         </h1>
                         <p className="text-lg md:text-2xl font-semibold text-gray-400">
-                            Full Stack Developer
+                            Developer
                         </p>
                     </div>
 
