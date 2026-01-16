@@ -16,7 +16,7 @@ const projects = [
     {
         id: 1,
         title: "Hokma Landing Page",
-        description: "Landing Page Comercial de la empresa de desarrollo de software Colombiana reconocida, Hokma Technologies Colombia.",
+        description: "Landing Page comercial desarrollada para Hokma Technologies Colombia, empresa colombiana reconocida en el sector de desarrollo de software. Este proyecto fue realizado conforme a los lineamientos institucionales y bajo la supervisión de la dirección ejecutiva, en mi calidad de colaborador vinculado profesionalmente a la organización.",
         languages: [
             { name: "React.js" },
             { name: "JavaScript" }
