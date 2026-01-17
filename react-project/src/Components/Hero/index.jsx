@@ -1,4 +1,5 @@
 import React from "react";
+import { PortfolioContext } from "../../Context";
 import { ButtonSolidColor } from "../ButtonSolidColor";
 import { ButtonTransparentColor } from "../ButtonTransparentColor";
 import { Tag } from "../Tag";
@@ -9,6 +10,7 @@ import { FaLinkedin } from "react-icons/fa";
 import perfil from "../../Images/perfil.jpg"
 
 export const Hero = () => {
+    const { languageTags } = React.useContext(PortfolioContext)
     return (
         <section className="flex items-center justify-center min-h-screen pt-32 md:pt-16 px-6 md:px-8 pb-16 bg-gradient-to-r from-slate-900 to-slate-800" id="Hero">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center max-w-6xl w-full">
@@ -35,24 +37,13 @@ export const Hero = () => {
 
                     {/* Tags de lenguajes */}
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                        <Tag>
-                            C#
-                        </Tag>
-                        <Tag>
-                            Python
-                        </Tag>
-                        <Tag>
-                            JavaScript
-                        </Tag>
-                        <Tag>
-                            SQL
-                        </Tag>
-                        <Tag>
-                            HTML
-                        </Tag>
-                        <Tag>
-                            CSS
-                        </Tag>
+                        {languageTags.map((tag, index) => {
+                            return (
+                                <Tag key={index}>
+                                    {tag}
+                                </Tag>
+                            )
+                        })}
                     </div>
 
                     {/* Botones */}
