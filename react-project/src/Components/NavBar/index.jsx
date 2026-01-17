@@ -1,13 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
+import { PortfolioContext } from "../../Context";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import { LanguageButton } from "../LanguageButton";
 
 export const NavBar = () => {
-    const [isOpen, setIsOpen] = useState(false);
+    const { menuOptions, isSpanish } = React.useContext(PortfolioContext);
+    const [isOpen, setIsOpen] = React.useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
+
+    const options = isSpanish ? menuOptions.spanish : menuOptions.english;
 
     return (
         <nav className="flex justify-between items-center fixed z-10 w-full py-4 px-8 bg-gradient-to-r from-blue-950 to-blue-900 shadow-lg">
@@ -15,10 +20,14 @@ export const NavBar = () => {
             
             {/* Desktop Menu */}
             <ul className="hidden md:flex list-none gap-12">
-                <a href="#Hero"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Acerca de</li></a>
-                <a href="#Projects"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Proyectos</li></a>
-                <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden">Contacto</li>
+                {options.map((option, index) => {
+                    return (
+                        <a key={index} href={`#${option.href}`}><li className={option.class}>{option.name}</li></a>
+                    )
+                })}
             </ul>
+
+            <LanguageButton classes={"hidden md:flex"}/>
 
             {/* Mobile Menu Button */}
             <button 
@@ -31,9 +40,14 @@ export const NavBar = () => {
             {/* Mobile Menu */}
             {isOpen && (
                 <ul className="absolute top-full left-0 w-full bg-gradient-to-r from-blue-950 to-blue-900 flex flex-col gap-4 py-4 px-8 md:hidden">
-                    <a href="#Hero"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Acerca de</li></a>
-                    <a href="#Projects"><li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer">Proyectos</li></a>
-                    <li className="text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden">Contacto</li>
+                    {options.map((option, index) => {
+                        return (
+                            <a key={index} href={`#${option.href}`}><li className={option.class}>{option.name}</li></a>
+                        )
+                    })}
+                    <div className="flex justify-center">
+                        <LanguageButton classes={"w-50"}/>
+                    </div>
                 </ul>
             )}
         </nav>

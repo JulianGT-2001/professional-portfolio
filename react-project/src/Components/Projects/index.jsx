@@ -6,7 +6,7 @@ import { IoFilter } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
 export const Projects = () => {
-    const { projects, languageTags } = React.useContext(PortfolioContext);
+    const { languageTags, projectsContent, isSpanish } = React.useContext(PortfolioContext);
     const [projectsToShow, setProjectsToShow] = useState(5);
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState(null);
@@ -23,27 +23,26 @@ export const Projects = () => {
         setSelectedFilter(selectedFilter === tag ? null : tag);
     };
 
+    const projectText = isSpanish ? projectsContent.spanish : projectsContent.english;
+
     const filteredProjects = selectedFilter
-        ? projects.filter(project => 
+        ? projectText.projects.filter(project => 
             project.languages.some(lang => lang.name.includes(selectedFilter))
           )
-        : projects;
+        : projectText.projects;
 
     return (
         <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-4" id="Projects">
             <div className="w-4/5 mx-auto flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-12">
                 <div className="flex flex-col gap-2">
-                    <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">Proyectos</h1>
+                    <h1 className="text-4xl md:text-5xl font-bold text-white tracking-tight">{projectText.title}</h1>
                     <p className="text-gray-300 text-lg leading-relaxed max-w-5xl">
-                        Desarrollo soluciones digitales enfocadas en automatizar procesos, 
-                        optimizar tiempos y escalar negocios. Cada proyecto demuestra eficiencia, 
-                        impacto y enfoque estratégico. Explora mis proyectos y descubre cómo puedo 
-                        transformar tus procesos en resultados medibles.
+                        {projectText.description}
                     </p>
                 </div>
                 <div className="flex gap-2">
                     <ButtonTransparentColor classes={"flex items-center"} onClick={handleFilterClick}>
-                        <IoFilter className="me-2"/> Filtrar
+                        <IoFilter className="me-2"/> {projectText.textFilterButton}
                     </ButtonTransparentColor>
                 </div>
             </div>
@@ -92,7 +91,7 @@ export const Projects = () => {
                     <button
                         onClick={handleLoadMore}
                         className="flex items-center gap-2 rounded-full border border-gray-700 bg-transparent px-8 py-3 text-sm font-medium text-slate-300 transition-colors hover:border-gray-500 hover:text-white hover:bg-gray-800">
-                        Cargar más proyectos
+                        {projectText.textLoadMoreProjects}
                         <IoIosArrowDown />
                     </button>
                 </div>
