@@ -7,7 +7,7 @@ import { ButtonRounded } from "../ButtonRounded";
 import { RoundedImage } from "../RoundedImage";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import perfil from "../../Images/perfil.jpg"
+import perfil from "../../Images/perfil.png"
 
 export const Hero = () => {
     const { languageTags, heroContent, isSpanish } = React.useContext(PortfolioContext);
