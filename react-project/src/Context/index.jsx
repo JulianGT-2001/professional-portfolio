@@ -83,7 +83,8 @@ export const CustomPortfolioProvider = ({ children }) => {
                         "apasionado por crear soluciones web modernas y eficientes. \n" +
                         "Caracterizado por el compromiso, liderazgo y trabajo en equipo.",
             textProjectsButton: "Ver Proyectos",
-            textCVButton: "Descargar CV"
+            textCVButton: "Descargar CV",
+            curriculumUrl: '/documents/spanish_curriculum.pdf',
         },
         english: {
             name: "Julian Darío",
@@ -94,7 +95,8 @@ export const CustomPortfolioProvider = ({ children }) => {
                         "passionate about creating modern and efficient web solutions. \n" +
                         "Characterized by commitment, leadership, and teamwork.",
             textProjectsButton: "View Projects",
-            textCVButton: "Download CV"
+            textCVButton: "Download CV",
+            curriculumUrl: '/documents/english_curriculum.pdf',
         }
     };
 

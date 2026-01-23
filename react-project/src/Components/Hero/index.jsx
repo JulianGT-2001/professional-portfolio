@@ -50,7 +50,7 @@ export const Hero = () => {
                         <ButtonSolidColor url="#Projects">
                             {heroDescription.textProjectsButton}
                         </ButtonSolidColor>
-                        <ButtonTransparentColor pdfUrl="/documents/curriculum.pdf">
+                        <ButtonTransparentColor pdfUrl={heroDescription.curriculumUrl}>
                             {heroDescription.textCVButton}
                         </ButtonTransparentColor>
                     </div>
