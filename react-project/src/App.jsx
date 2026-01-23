@@ -1,10 +1,9 @@
 import { CustomPortfolioProvider } from './Context'
 import { NavBar } from './Components/NavBar'
-import { ButtonSolidColor } from './Components/ButtonSolidColor'
 import { Hero } from './Components/Hero'
 import { Footer } from './Components/Footer'
 import { Projects } from './Components/Projects'
-import './App.css'
+import { WorkExperience } from './Components/WorkExperience'
 
 export default function App() {
   return (
@@ -12,6 +11,7 @@ export default function App() {
     <CustomPortfolioProvider>
       <NavBar />
       <Hero />
+      <WorkExperience />
       <Projects />
       <Footer />
     </CustomPortfolioProvider>

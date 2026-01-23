@@ -406,7 +406,104 @@ export const CustomPortfolioProvider = ({ children }) => {
         english: {
             copyrightText: "JGT Portafolio. All rights reserved."
         }
-    }
+    };
+
+    const spanishExperiences = [
+        {
+            title: 'Ingeniero FullStack',
+            date: 'Oct 2022 - Actualidad',
+            subtitle: 'Hokma Technologies',
+            descriptions: [
+                'Crear soluciones digitales accesibles desde navegadores, utilizando tecnologías modernas para resolver necesidades empresariales y de usuarios.',
+                'Construir sistemas que automaticen tareas repetitivas, reduciendo errores humanos y aumentando la eficiencia operativa de los procesos.',
+                'Arquitectar y programar la lógica del servidor, bases de datos y servicios que soportan el funcionamiento de las aplicaciones.',
+                'Desarrollar componentes visuales interactivos que permiten a los usuarios comunicarse de forma clara y efectiva con el sistema.',
+                'Analizar y mejorar flujos de trabajo y algoritmos para hacer más rápido, económico y eficiente el uso de recursos.',
+                'Diseñar y ajustar funcionalidades que hagan que el uso del software sea intuitivo, agradable y fácil de entender.',
+                'Colaborar con equipos multidisciplinarios para planificar, desarrollar, probar y entregar soluciones tecnológicas de alta calidad.'
+            ]
+        },
+        {
+            title: 'Lider de tecnología del cliente',
+            date: 'Abr 2022 - Oct 2022',
+            subtitle: 'Microsoft',
+            descriptions: [
+                'Proponer soluciones estratégicas y tecnológicas que ayuden a las empresas a mejorar su desempeño.',
+                'Evaluar plataformas, software y sistemas para determinar cuáles se adaptan mejor a las necesidades del negocio.',
+                'Detectar procesos lentos o ineficientes dentro de la empresa para proponer mejoras basadas en tecnología.',
+                'Implementar herramientas y procesos que permitan ofrecer respuestas más rápidas, claras y eficientes a los clientes.',
+                'Acompañar a la empresa en la elección de las soluciones tecnológicas más adecuadas según sus objetivos.',
+                'Proveer información técnica y estratégica para que la empresa pueda tomar decisiones informadas.',
+            ]
+        },
+        {
+            title: 'Aprendiz de sistemas',
+            date: 'Jul 2019 - Ene 2020',
+            subtitle: 'Jorge Cortes y CIA',
+            descriptions: [
+                'Ejecutar revisiones periódicas para evitar fallas, optimizar el rendimiento y prolongar la vida útil de los equipos.',
+                'Identificar, reparar y solucionar fallas de hardware y software que afectan el funcionamiento de los dispositivos.',
+                'Atender solicitudes y problemas tecnológicos de los usuarios, asegurando que puedan trabajar sin interrupciones.',
+                'Analizar errores, detectar causas y aplicar soluciones efectivas de manera oportuna.',
+                'Verificar que los computadores y sistemas estén operando de forma estable y segura.',
+                'Contribuir al buen desempeño del área de sistemas para que la empresa pueda cumplir sus objetivos.',
+            ]
+        },
+    ];
+
+    const englishExperiences = [
+        {
+            title: 'FullStack Developer',
+            date: 'Oct 2022 - Actually',
+            subtitle: 'Hokma Technologies',
+            descriptions: [
+                "Create digital solutions accessible through browsers, using modern technologies to solve business and user needs.",
+                "Build systems that automate repetitive tasks, reducing human errors and increasing operational process efficiency.",
+                "Design and program server-side logic, databases, and services that support application functionality.",
+                "Develop interactive visual components that allow users to communicate clearly and effectively with the system.",
+                "Analyze and improve workflows and algorithms to make resource usage faster, cheaper, and more efficient.",
+                "Design and refine features that make software usage intuitive, pleasant, and easy to understand.",
+                "Collaborate with multidisciplinary teams to plan, develop, test, and deliver high-quality technology solutions."
+            ]
+        },
+        {
+            title: "Client Technology Lead",
+            date: "Apr 2022 - Oct 2022",
+            subtitle: "Microsoft",
+            descriptions: [
+                "Propose strategic and technological solutions that help companies improve their performance.",
+                "Evaluate platforms, software, and systems to determine which best fit business needs.",
+                "Identify slow or inefficient processes within the company to propose technology-based improvements.",
+                "Implement tools and processes that enable faster, clearer, and more efficient customer responses.",
+                "Support the company in selecting the most appropriate technological solutions based on its objectives.",
+                "Provide technical and strategic information so the company can make informed decisions."
+            ]
+        },
+        {
+            title: "Systems Apprentice",
+            date: "Jul 2019 - Jan 2020",
+            subtitle: "Jorge Cortes & Co",
+            descriptions: [
+                "Perform regular inspections to prevent failures, optimize performance, and extend the lifespan of equipment.",
+                "Identify, repair, and resolve hardware and software issues that affect device operation.",
+                "Handle user requests and technical issues, ensuring they can work without interruptions.",
+                "Analyze errors, identify root causes, and apply effective solutions in a timely manner.",
+                "Verify that computers and systems are operating in a stable and secure manner.",
+                "Contribute to the effective performance of the IT department so the company can achieve its goals."
+            ]
+        }
+    ];
+
+    const workExperience = {
+        spanish: {
+            title: 'Experiencia Laboral',
+            data: spanishExperiences
+        },
+        english: {
+            title: 'Work Experience',
+            data: englishExperiences
+        }
+    };
     return (
         <PortfolioContext.Provider value={{
             languageTags,
@@ -415,7 +512,8 @@ export const CustomPortfolioProvider = ({ children }) => {
             setIsSpanish,
             heroContent,
             projectsContent,
-            footerContent
+            footerContent,
+            workExperience
         }}>
             { children }
         </PortfolioContext.Provider>
