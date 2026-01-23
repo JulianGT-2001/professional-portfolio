@@ -29,6 +29,11 @@ export const CustomPortfolioProvider = ({ children }) => {
                 name: "Proyectos"
             },
             {
+                href: "WorkExperience",
+                class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
+                name: "Experiencia Laboral"
+            },
+            {
                 href: "",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden",
                 name: "Contacto"
@@ -44,6 +49,11 @@ export const CustomPortfolioProvider = ({ children }) => {
                 href: "Projects",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
                 name: "Projects"
+            },
+            {
+                href: "WorkExperience",
+                class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
+                name: "Work Experience"
             },
             {
                 href: "",
