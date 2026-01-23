@@ -24,14 +24,19 @@ export const CustomPortfolioProvider = ({ children }) => {
                 name: "Acerca de"
             },
             {
-                href: "Projects",
+                href: "Studies",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
-                name: "Proyectos"
+                name: "Estudios"
             },
             {
                 href: "WorkExperience",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
                 name: "Experiencia Laboral"
+            },
+            {
+                href: "Projects",
+                class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
+                name: "Proyectos"
             },
             {
                 href: "",
@@ -46,14 +51,19 @@ export const CustomPortfolioProvider = ({ children }) => {
                 name: "About"
             },
             {
-                href: "Projects",
+                href: "Studies",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
-                name: "Projects"
+                name: "Studies"
             },
             {
                 href: "WorkExperience",
                 class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
                 name: "Work Experience"
+            },
+            {
+                href: "Projects",
+                class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
+                name: "Projects"
             },
             {
                 href: "",
@@ -514,6 +524,60 @@ export const CustomPortfolioProvider = ({ children }) => {
             data: englishExperiences
         }
     };
+
+    const spanishStudies = [
+        {
+            title: 'Ingeniería de sistemas',
+            date: 'Jan 2024 - Actualidad',
+            subtitle: 'Universidad Nacional Abierta y a Distancia',
+            description: 'Formación académica enfocada en el diseño, desarrollo y mantenimiento de sistemas de información, software y soluciones tecnológicas, incluyendo programación, bases de datos, redes, arquitectura de software y gestión de proyectos.'
+        },
+        {
+            title: 'Tecnólogo en análisis y desarrollo de sistemas de información',
+            date: 'Oct 2021 - Oct 2023',
+            subtitle: 'Servicio Nacional de Aprendizaje (SENA)',
+            description: 'Formación técnica orientada al ciclo completo de desarrollo de software, incluyendo análisis, diseño, desarrollo, implementación, pruebas y mantenimiento, junto con competencias en calidad de software y negociación tecnológica para crear soluciones eficientes y competitivas.'
+        },
+        {
+            title: "Técnico en sistemas",
+            date: "Feb 2019 - Feb 2020",
+            subtitle: "Servicio Nacional de Aprendizaje (SENA)",
+            description: "Formación técnica enfocada en el mantenimiento preventivo y correctivo de equipos de cómputo, instalación y configuración de redes de datos, soporte técnico a usuarios, operación de herramientas digitales, gestión de servicios TIC y seguridad de la información, complementada con competencias en inglés básico, cultura ambiental y ética profesional."
+        }
+    ];
+
+    const englishStudies = [
+        {
+            title: "Systems Engineering",
+            date: "Jan 2024 - Present",
+            subtitle: "Universidad Nacional Abierta y a Distancia",
+            description: "Academic training focused on the design, development, and maintenance of information systems, software, and technological solutions, including programming, databases, networks, software architecture, and project management."
+        },
+        {
+            title: "Technologist in Analysis and Development of Information Systems",
+            date: "Oct 2021 - Oct 2023",
+            subtitle: "Servicio Nacional de Aprendizaje (SENA)",
+            description: "Technical training focused on the complete software development life cycle, including analysis, design, development, implementation, testing, and maintenance, along with skills in software quality and technology negotiation to create efficient and competitive solutions."
+        },
+        {
+            title: "Systems Technician",
+            date: "Feb 2019 - Feb 2020",
+            subtitle: "Servicio Nacional de Aprendizaje (SENA)",
+            description: "Technical training focused on preventive and corrective maintenance of computer equipment, installation and configuration of data networks, user technical support, operation of digital tools, IT services management, and information security, complemented by basic English, environmental awareness, and professional ethics."
+        }
+    ];
+
+
+    const studies = {
+        spanish: {
+            title: 'Estudios Académicos',
+            data: spanishStudies
+        },
+        english: {
+            title: 'Academic Studies',
+            data: englishStudies
+        }
+    };
     return (
         <PortfolioContext.Provider value={{
             languageTags,
@@ -523,7 +587,8 @@ export const CustomPortfolioProvider = ({ children }) => {
             heroContent,
             projectsContent,
             footerContent,
-            workExperience
+            workExperience,
+            studies
         }}>
             { children }
         </PortfolioContext.Provider>
