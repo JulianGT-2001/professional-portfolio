@@ -4,7 +4,7 @@ import { IoArrowForward } from "react-icons/io5";
 export const TimelineItem = ({ data }) => {
     return data.map((item, index) => {
         return (
-            <div className="relative pl-12 md:pl-16 group">
+            <div key={index} className="relative pl-12 md:pl-16 group">
                 <div className={`absolute left-0 top-1.5 w-4 h-4 md:w-5 md:h-5 rounded-full border-4 border-slate-50 ${index > 0 ? 'bg-blue-300' : 'bg-blue-500'} shadow-[0_0_15px_rgba(96,165,250,0.6)] transition-transform group-hover:scale-125`}></div>
                 <div className='w-full flex flex-col gap-2'>
                     <div className='flex flex-col md:flex-row md:items-center md:justify-between'>

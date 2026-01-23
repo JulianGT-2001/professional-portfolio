@@ -12,7 +12,15 @@ export const PortfolioContext = React.createContext();
 
 export const CustomPortfolioProvider = ({ children }) => {
     // NavBar ~ Set Language
-    const [ isSpanish, setIsSpanish ] = React.useState(true);
+    const [ isSpanish, setIsSpanish ] = React.useState(() => {
+        const savedLanguage = localStorage.getItem('portfolioLanguage');
+        return savedLanguage ? JSON.parse(savedLanguage) : true;
+    });
+
+    // Guardar la preferencia de idioma en localStorage cuando cambia
+    React.useEffect(() => {
+        localStorage.setItem('portfolioLanguage', JSON.stringify(isSpanish));
+    }, [isSpanish]);
 
     const languageTags = ["JavaScript", "C#", "Python", "SQL", "HTML", "CSS"];
 
