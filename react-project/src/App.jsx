@@ -1,5 +1,6 @@
 import React from 'react';
 import { CustomPortfolioProvider } from './Context';
+import { CustomLanguageProvider } from './context/LanguageContext';
 import { NavBar } from './Components/Sections/NavBar';
 import { Hero } from './Components/Sections/Hero';
 import { Footer } from './Components/Sections/Footer';
@@ -11,12 +12,14 @@ export default function App() {
   return (
     <>
     <CustomPortfolioProvider>
-      <NavBar />
-      <Hero />
-      <Studies />
-      <WorkExperience />
-      <Projects />
-      <Footer />
+      <CustomLanguageProvider>
+        <NavBar />
+        <Hero />
+        <Studies />
+        <WorkExperience />
+        <Projects />
+        <Footer />
+      </CustomLanguageProvider>
     </CustomPortfolioProvider>
     </>
   )

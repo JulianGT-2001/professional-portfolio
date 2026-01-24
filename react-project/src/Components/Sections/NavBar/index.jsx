@@ -2,10 +2,12 @@ import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
 import { PortfolioContext } from "../../../Context";
+import { LanguageContext } from "../../../context/LanguageContext";
 import { LanguageButton } from "../../Common/Button/LanguageButton";
 
 export const NavBar = () => {
-    const { menuOptions, isSpanish } = React.useContext(PortfolioContext);
+    const { menuOptions } = React.useContext(PortfolioContext);
+    const { isSpanish } = React.useContext(LanguageContext);
     const [isOpen, setIsOpen] = React.useState(false);
 
     const toggleMenu = () => {

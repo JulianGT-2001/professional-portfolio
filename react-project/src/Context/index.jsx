@@ -11,17 +11,6 @@ import sginlCapture from '../assets/photos/sginl-capture.png'
 export const PortfolioContext = React.createContext();
 
 export const CustomPortfolioProvider = ({ children }) => {
-    // NavBar ~ Set Language
-    const [ isSpanish, setIsSpanish ] = React.useState(() => {
-        const savedLanguage = localStorage.getItem('portfolioLanguage');
-        return savedLanguage ? JSON.parse(savedLanguage) : true;
-    });
-
-    // Guardar la preferencia de idioma en localStorage cuando cambia
-    React.useEffect(() => {
-        localStorage.setItem('portfolioLanguage', JSON.stringify(isSpanish));
-    }, [isSpanish]);
-
     const languageTags = ["JavaScript", "C#", "Python", "SQL", "HTML", "CSS"];
 
     const menuOptions = {
@@ -592,8 +581,6 @@ export const CustomPortfolioProvider = ({ children }) => {
         <PortfolioContext.Provider value={{
             languageTags,
             menuOptions,
-            isSpanish,
-            setIsSpanish,
             heroContent,
             projectsContent,
             footerContent,

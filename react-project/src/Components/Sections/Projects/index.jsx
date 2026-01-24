@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import { IoFilter } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 import { PortfolioContext } from "../../../Context";
+import { LanguageContext } from "../../../context/LanguageContext";
 import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
 import { ProjectCard } from "../../Common/ProjectCard";
 
 export const Projects = () => {
-    const { languageTags, projectsContent, isSpanish } = React.useContext(PortfolioContext);
+    const { languageTags, projectsContent } = React.useContext(PortfolioContext);
+    const { isSpanish } = React.useContext(LanguageContext);
     const [projectsToShow, setProjectsToShow] = useState(5);
     const [showFilters, setShowFilters] = useState(false);
     const [selectedFilter, setSelectedFilter] = useState(null);

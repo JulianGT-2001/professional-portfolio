@@ -1,8 +1,10 @@
 import React from "react";
 import { PortfolioContext } from "../../../Context";
+import { LanguageContext } from "../../../context/LanguageContext";
 
 export const Footer = () => {
-    const { footerContent, isSpanish } = React.useContext(PortfolioContext);
+    const { footerContent } = React.useContext(PortfolioContext);
+    const { isSpanish } = React.useContext(LanguageContext);
     const footerText = isSpanish ? footerContent.spanish : footerContent.english;
     return (
         <footer className="py-10 border-t border-blue-900 bg-blue-950 transition-colors flex flex-col justify-center items-center gap-6">

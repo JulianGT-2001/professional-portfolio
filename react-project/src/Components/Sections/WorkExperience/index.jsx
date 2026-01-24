@@ -1,9 +1,11 @@
 import React from 'react';
 import { PortfolioContext } from '../../../Context';
+import { LanguageContext } from '../../../context/LanguageContext';
 import { Timeline } from '../../Common/Timeline';
 
 export const WorkExperience = () => {
-    const { workExperience, isSpanish } = React.useContext(PortfolioContext);
+    const { workExperience } = React.useContext(PortfolioContext);
+    const { isSpanish } = React.useContext(LanguageContext);
     const experienceText = isSpanish ? workExperience.spanish : workExperience.english;
     return (
         <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-4" id="WorkExperience">

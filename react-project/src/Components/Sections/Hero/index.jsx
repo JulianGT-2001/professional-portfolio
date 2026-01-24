@@ -2,6 +2,7 @@ import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { PortfolioContext } from "../../../Context";
+import { LanguageContext } from "../../../context/LanguageContext";
 import { ButtonSolidColor } from "../../Common/Button/ButtonSolidColor";
 import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
 import { Tag } from "../../Common/Tags/Tag";
@@ -10,7 +11,8 @@ import { RoundedImage } from "../../Common/RoundedImage";
 import perfil from "../../../assets/photos/perfil.png";
 
 export const Hero = () => {
-    const { languageTags, heroContent, isSpanish } = React.useContext(PortfolioContext);
+    const { languageTags, heroContent } = React.useContext(PortfolioContext);
+    const { isSpanish } = React.useContext(LanguageContext);
 
     const heroDescription = isSpanish ? heroContent.spanish : heroContent.english;
     return (
