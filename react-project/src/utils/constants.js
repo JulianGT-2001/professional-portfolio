@@ -1,11 +1,11 @@
-import dotnetCapture from '../assets/photos/dotnet-fileportal-capture.png';
-import dotnetWebCapture from '../assets/photos/dotnet-fileportal-web-capture.png';
-import dotnetGateWayCapture from '../assets/photos/dotnet-fileportal-gateway-capture.png';
-import hokmaLandingCapture from '../assets/photos/hokma-landing-capture.png';
-import todoistCloneCapture from '../assets/photos/todoist-clone-capture.png';
-import shopiCapture from '../assets/photos/shopi-capture.png';
-import platziTravelCapture from '../assets/photos/platzi-travel-capture.png';
-import sginlCapture from '../assets/photos/sginl-capture.png';
+import dotnetCapture from '../assets/photos/dotnet-fileportal-capture.webp';
+import dotnetWebCapture from '../assets/photos/dotnet-fileportal-web-capture.webp';
+import dotnetGateWayCapture from '../assets/photos/dotnet-fileportal-gateway-capture.webp';
+import hokmaLandingCapture from '../assets/photos/hokma-landing-capture.webp';
+import todoistCloneCapture from '../assets/photos/todoist-clone-capture.webp';
+import shopiCapture from '../assets/photos/shopi-capture.webp';
+import platziTravelCapture from '../assets/photos/platzi-travel-capture.webp';
+import sginlCapture from '../assets/photos/sginl-capture.webp';
 
 const LANGUAGE_TAGS = ["JavaScript", "C#", "Python", "SQL", "HTML", "CSS"];
 

@@ -8,7 +8,7 @@ import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentCol
 import { Tag } from "../../Common/Tags/Tag";
 import { ButtonRounded } from "../../Common/Button/ButtonRounded";
 import { RoundedImage } from "../../Common/RoundedImage";
-import perfil from "../../../assets/photos/perfil.png";
+import perfil from "../../../assets/photos/perfil.webp";
 
 export const Hero = () => {
     const { content } = React.useContext(ContentContext);
