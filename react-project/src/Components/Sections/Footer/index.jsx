@@ -1,11 +1,11 @@
 import React from "react";
-import { PortfolioContext } from "../../../Context";
+import { ContentContext } from "../../../context/ContentContext";
 import { LanguageContext } from "../../../context/LanguageContext";
 
 export const Footer = () => {
-    const { footerContent } = React.useContext(PortfolioContext);
+    const { content } = React.useContext(ContentContext);
     const { isSpanish } = React.useContext(LanguageContext);
-    const footerText = isSpanish ? footerContent.spanish : footerContent.english;
+    const footerText = isSpanish ? content.footerContent.spanish : content.footerContent.english;
     return (
         <footer className="py-10 border-t border-blue-900 bg-blue-950 transition-colors flex flex-col justify-center items-center gap-6">
             <p className="text-md text-gray-300 text-center">© {new Date().getFullYear()} {footerText.copyrightText}</p>

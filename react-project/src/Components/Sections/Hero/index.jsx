@@ -1,7 +1,7 @@
 import React from "react";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import { PortfolioContext } from "../../../Context";
+import { ContentContext } from "../../../context/ContentContext";
 import { LanguageContext } from "../../../context/LanguageContext";
 import { ButtonSolidColor } from "../../Common/Button/ButtonSolidColor";
 import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
@@ -11,10 +11,10 @@ import { RoundedImage } from "../../Common/RoundedImage";
 import perfil from "../../../assets/photos/perfil.png";
 
 export const Hero = () => {
-    const { languageTags, heroContent } = React.useContext(PortfolioContext);
+    const { content } = React.useContext(ContentContext);
     const { isSpanish } = React.useContext(LanguageContext);
 
-    const heroDescription = isSpanish ? heroContent.spanish : heroContent.english;
+    const heroDescription = isSpanish ? content.heroContent.spanish : content.heroContent.english;
     return (
         <section className="flex items-center justify-center min-h-screen pt-32 md:pt-16 px-6 md:px-8 pb-16 bg-gradient-to-r from-slate-900 to-slate-800" id="Hero">
             <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center justify-center max-w-6xl w-full">
@@ -38,7 +38,7 @@ export const Hero = () => {
 
                     {/* Tags de lenguajes */}
                     <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                        {languageTags.map((tag, index) => {
+                        {content.languageTags.map((tag, index) => {
                             return (
                                 <Tag key={index}>
                                     {tag}

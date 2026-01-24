@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import { IoFilter } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
-import { PortfolioContext } from "../../../Context";
+import { ContentContext } from "../../../context/ContentContext";
 import { LanguageContext } from "../../../context/LanguageContext";
 import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
 import { ProjectCard } from "../../Common/ProjectCard";
 
 export const Projects = () => {
-    const { languageTags, projectsContent } = React.useContext(PortfolioContext);
+    const { content } = React.useContext(ContentContext);
     const { isSpanish } = React.useContext(LanguageContext);
     const [projectsToShow, setProjectsToShow] = useState(5);
     const [showFilters, setShowFilters] = useState(false);
@@ -25,7 +25,7 @@ export const Projects = () => {
         setSelectedFilter(selectedFilter === tag ? null : tag);
     };
 
-    const projectText = isSpanish ? projectsContent.spanish : projectsContent.english;
+    const projectText = isSpanish ? content.projectsContent.spanish : content.projectsContent.english;
 
     const filteredProjects = selectedFilter
         ? projectText.projects.filter(project => 
@@ -51,7 +51,7 @@ export const Projects = () => {
             {/* Filter Tags */}
             {showFilters && (
                 <div className="w-4/5 mx-auto flex flex-wrap gap-3 mb-8">
-                    {languageTags.map((tag, index) => (
+                    {content.languageTags.map((tag, index) => (
                         <button
                             key={index}
                             onClick={() => handleFilterTagClick(tag)}

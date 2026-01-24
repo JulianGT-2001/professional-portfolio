@@ -1,13 +1,13 @@
 import React from "react";
-import { PortfolioContext } from '../../../Context';
+import { ContentContext } from '../../../context/ContentContext';
 import { LanguageContext } from "../../../context/LanguageContext";
 import { Timeline } from '../../Common/Timeline';
 
 
 export const Studies = () => {
-    const { studies } = React.useContext(PortfolioContext);
+    const { content } = React.useContext(ContentContext);
     const { isSpanish } = React.useContext(LanguageContext);
-    const studiesText = isSpanish ? studies.spanish : studies.english;
+    const studiesText = isSpanish ? content.studies.spanish : content.studies.english;
     return (
         <section className="bg-gradient-to-r from-slate-900 to-slate-800 py-4" id="Studies">
             <div className="w-4/5 mx-auto flex flex-col md:flex-row items-center md:items-end justify-between gap-8 mb-12">

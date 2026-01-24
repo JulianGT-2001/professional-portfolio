@@ -1,12 +1,12 @@
 import React from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import { PortfolioContext } from "../../../Context";
+import { ContentContext } from "../../../context/ContentContext";
 import { LanguageContext } from "../../../context/LanguageContext";
 import { LanguageButton } from "../../Common/Button/LanguageButton";
 
 export const NavBar = () => {
-    const { menuOptions } = React.useContext(PortfolioContext);
+    const { content } = React.useContext(ContentContext);
     const { isSpanish } = React.useContext(LanguageContext);
     const [isOpen, setIsOpen] = React.useState(false);
 
@@ -14,7 +14,7 @@ export const NavBar = () => {
         setIsOpen(!isOpen);
     };
 
-    const options = isSpanish ? menuOptions.spanish : menuOptions.english;
+    const options = isSpanish ? content.menuOptions.spanish : content.menuOptions.english;
 
     return (
         <nav className="flex justify-between items-center fixed z-10 w-full py-4 px-8 bg-gradient-to-r from-blue-950 to-blue-900 shadow-lg">
