@@ -1,12 +1,14 @@
 import React from "react";
+import { CustomLanguageProvider } from "./LanguageContext";
+import { CustomContentProvider } from "./ContentContext";
 
-export const PortfolioContext = React.createContext();
-
-export const CustomPortfolioProvider = ({ children }) => {
+export const CombinedProvider = ({ children }) => {
     
     return (
-        <PortfolioContext.Provider>
-            { children }
-        </PortfolioContext.Provider>
+        <CustomLanguageProvider>
+            <CustomContentProvider>
+                { children }
+            </CustomContentProvider>
+        </CustomLanguageProvider>
     )
 }
