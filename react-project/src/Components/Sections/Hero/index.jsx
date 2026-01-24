@@ -1,13 +1,13 @@
 import React from "react";
-import { PortfolioContext } from "../../Context";
-import { ButtonSolidColor } from "../ButtonSolidColor";
-import { ButtonTransparentColor } from "../ButtonTransparentColor";
-import { Tag } from "../Tag";
-import { ButtonRounded } from "../ButtonRounded";
-import { RoundedImage } from "../RoundedImage";
 import { IoLogoGithub } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import perfil from "../../Images/perfil.png"
+import { PortfolioContext } from "../../../Context";
+import { ButtonSolidColor } from "../../Common/Button/ButtonSolidColor";
+import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
+import { Tag } from "../../Common/Tags/Tag";
+import { ButtonRounded } from "../../Common/Button/ButtonRounded";
+import { RoundedImage } from "../../Common/RoundedImage";
+import perfil from "../../../assets/photos/perfil.png";
 
 export const Hero = () => {
     const { languageTags, heroContent, isSpanish } = React.useContext(PortfolioContext);

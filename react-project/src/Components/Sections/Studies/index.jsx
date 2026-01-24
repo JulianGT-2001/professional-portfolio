@@ -1,6 +1,6 @@
 import React from "react";
-import { PortfolioContext } from '../../Context';
-import { Timeline } from '../Timeline';
+import { PortfolioContext } from '../../../Context';
+import { Timeline } from '../../Common/Timeline';
 
 
 export const Studies = () => {

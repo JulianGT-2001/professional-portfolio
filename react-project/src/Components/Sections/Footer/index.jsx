@@ -1,5 +1,5 @@
 import React from "react";
-import { PortfolioContext } from "../../Context";
+import { PortfolioContext } from "../../../Context";
 
 export const Footer = () => {
     const { footerContent, isSpanish } = React.useContext(PortfolioContext);

@@ -1,8 +1,8 @@
 import React from "react";
-import { PortfolioContext } from "../../Context";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
-import { LanguageButton } from "../LanguageButton";
+import { PortfolioContext } from "../../../Context";
+import { LanguageButton } from "../../Common/Button/LanguageButton";
 
 export const NavBar = () => {
     const { menuOptions, isSpanish } = React.useContext(PortfolioContext);

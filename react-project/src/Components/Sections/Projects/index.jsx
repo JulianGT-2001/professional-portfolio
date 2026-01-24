@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { PortfolioContext } from "../../Context";
-import { ButtonTransparentColor } from "../ButtonTransparentColor";
-import { ProjectCard } from "../ProjectCard";
 import { IoFilter } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
+import { PortfolioContext } from "../../../Context";
+import { ButtonTransparentColor } from "../../Common/Button/ButtonTransparentColor";
+import { ProjectCard } from "../../Common/ProjectCard";
 
 export const Projects = () => {
     const { languageTags, projectsContent, isSpanish } = React.useContext(PortfolioContext);
