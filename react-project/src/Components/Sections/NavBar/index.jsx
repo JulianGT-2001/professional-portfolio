@@ -44,7 +44,7 @@ export const NavBar = () => {
                 <ul className="absolute top-full left-0 w-full bg-gradient-to-r from-blue-950 to-blue-900 flex flex-col gap-4 py-4 px-8 md:hidden">
                     {options.map((option, index) => {
                         return (
-                            <a key={index} href={`#${option.href}`}><li className={option.class}>{option.name}</li></a>
+                            <a onClick={toggleMenu} key={index} href={`#${option.href}`}><li className={option.class}>{option.name}</li></a>
                         )
                     })}
                     <div className="flex justify-center">

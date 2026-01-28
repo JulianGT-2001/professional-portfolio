@@ -2,7 +2,6 @@ import React from 'react';
 import { IoIosSend } from "react-icons/io";
 import { ContentContext } from '../../../context/ContentContext';
 import { LanguageContext } from '../../../context/LanguageContext';
-import { ButtonSolidColor } from '../../Common/Button/ButtonSolidColor';
 
 export const Contact = () => {
     const { content } = React.useContext(ContentContext);
@@ -20,7 +19,7 @@ export const Contact = () => {
                 </div>
                 <div className=''>
                     <div className='rounded-lg shadow-2xl bg-slate-900 p-10'>
-                        <form method='post' autoComplete='false'>
+                        <form method='post' autoComplete="off">
                             <div className='flex flex-col md:flex-row gap-3 mb-3'>
                                 <div className='flex flex-col gap-2 justify-center w-full'>
                                     <label className='text-sm text-slate-400'>{ contactContent.form.nameInput.label }</label>
@@ -44,10 +43,10 @@ export const Contact = () => {
                                 </div>
                             </div>
                             <div className='flex items-center justify-end'>
-                                <ButtonSolidColor classes='w-full text-center md:w-auto md:text-start flex items-center justify-center gap-2'>
+                                <button type='submit' className='bg-blue-500 hover:bg-blue-700 font-bold px-6 py-2 rounded transition-all duration-300 text-white border-2 border-blue-500 cursor-pointer w-full text-center md:w-auto md:text-start flex items-center justify-center gap-2'>
                                     { contactContent.form.buttonText }
                                     <IoIosSend className='text-lg'/>
-                                </ButtonSolidColor>
+                                </button>
                             </div>
                         </form>
                     </div>
