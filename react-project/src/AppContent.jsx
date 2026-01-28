@@ -5,6 +5,7 @@ import { Footer } from './Components/Sections/Footer';
 import { Projects } from './Components/Sections/Projects';
 import { WorkExperience } from './Components/Sections/WorkExperience';
 import { Studies } from './Components/Sections/Studies';
+import { Contact } from './Components/Sections/Contact';
 
 
 export const AppContent = () => {
@@ -15,6 +16,7 @@ export const AppContent = () => {
         <Studies />
         <WorkExperience />
         <Projects />
+        <Contact />
         <Footer />
         </>
     )

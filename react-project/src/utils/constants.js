@@ -32,8 +32,8 @@ const MENU_OPTIONS = {
             name: "Proyectos"
         },
         {
-            href: "",
-            class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden",
+            href: "Contact",
+            class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
             name: "Contacto"
         },
     ],
@@ -59,8 +59,8 @@ const MENU_OPTIONS = {
             name: "Projects"
         },
         {
-            href: "",
-            class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer hidden",
+            href: "Contact",
+            class: "text-white font-medium hover:text-blue-300 transition-colors duration-300 cursor-pointer",
             name: "Contact"
         },
     ],
@@ -574,6 +574,55 @@ const STUDIES = {
     }
 };
 
+const CONTACT_CONTENT = {
+    spanish: {
+        title: '¡Manos a la obra!',
+        description: ('¿Tiene una idea de negocio en mente y desea llevarla a cabo? ¿Posee ya un negocio, pero requiere agilizar su proceso y automatizarlo para generar más ventas? Hablemos acerca de como puedo ayudarte.'),
+        form: {
+            nameInput: {
+                label: 'Nombre',
+                placeholder: 'Tu nombre'
+            },
+            emailInput: {
+                label: 'Correo',
+                placeholder: 'tu@email.com'
+            },
+            subjectInput: {
+                label: 'Asunto',
+                placeholder: '¿En que puedo ayudarte?'
+            },
+            messageInput: {
+                label: 'Mensaje',
+                placeholder: 'Describe tu proyecto o consulta...'
+            },
+            buttonText: 'Enviar Mensaje'
+        }
+    },
+    english: {
+        title: 'Let’s get to work!',
+        description: 'Do you have a business idea in mind and want to make it happen? Do you already have a business but need to streamline and automate your processes to generate more sales? Let’s talk about how I can help you.',
+        form: {
+            nameInput: {
+                label: 'Name',
+                placeholder: 'Your name'
+            },
+            emailInput: {
+                label: 'Email',
+                placeholder: 'your@email.com'
+            },
+            subjectInput: {
+                label: 'Subject',
+                placeholder: 'How can I help you?'
+            },
+            messageInput: {
+                label: 'Message',
+                placeholder: 'Describe your project or inquiry...'
+            },
+            buttonText: 'Send Message'
+        }
+    },
+}
+
 export const getPortfolioContent = () => ({
     languageTags: LANGUAGE_TAGS,
     menuOptions: MENU_OPTIONS,
@@ -581,5 +630,6 @@ export const getPortfolioContent = () => ({
     projectsContent: PROJECTS_CONTENT,
     footerContent: FOOTER_CONTENT,
     workExperience: WORK_EXPERIENCE,
-    studies: STUDIES
+    studies: STUDIES,
+    contactContent: CONTACT_CONTENT
 })
