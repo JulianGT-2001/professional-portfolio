@@ -577,7 +577,7 @@ const STUDIES = {
 const CONTACT_CONTENT = {
     spanish: {
         title: '¡Manos a la obra!',
-        description: ('¿Tiene una idea de negocio en mente y desea llevarla a cabo? ¿Posee ya un negocio, pero requiere agilizar su proceso y automatizarlo para generar más ventas? Hablemos acerca de como puedo ayudarte.'),
+        description: '¿Tienes una idea de negocio y quieres hacerla realidad? ¿Ya cuentas con un proyecto, pero necesitas optimizar procesos, automatizar tareas o potenciar tus ventas con tecnología?Actualmente me encuentro trabajando, pero estoy abierto a ofertas laborales y proyectos freelance. Conversemos y miremos cómo puedo aportar valor a tu proyecto con soluciones digitales a la medida.',
         form: {
             nameInput: {
                 label: 'Nombre',
@@ -595,12 +595,13 @@ const CONTACT_CONTENT = {
                 label: 'Mensaje',
                 placeholder: 'Describe tu proyecto o consulta...'
             },
+            succeedMessage: '¡Se ha procesado su mensaje de manera satisfactoria!',
             buttonText: 'Enviar Mensaje'
         }
     },
     english: {
         title: 'Let’s get to work!',
-        description: 'Do you have a business idea in mind and want to make it happen? Do you already have a business but need to streamline and automate your processes to generate more sales? Let’s talk about how I can help you.',
+        description: "Do you have a business idea you want to bring to life? Do you already have a project but need to optimize processes, automate tasks, or boost your sales with technology? I'm currently employed, but I'm open to job offers and freelance projects. Let's talk and see how I can add value to your project with customized digital solutions.",
         form: {
             nameInput: {
                 label: 'Name',
@@ -618,6 +619,7 @@ const CONTACT_CONTENT = {
                 label: 'Message',
                 placeholder: 'Describe your project or inquiry...'
             },
+            succeedMessage: '¡Your message has been processed successfully!',
             buttonText: 'Send Message'
         }
     },
